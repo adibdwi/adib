@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Promosi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #ff5722;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .banner {
+            background: url('https://via.placeholder.com/1200x400') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            position: relative;
+            color: #fff;
+            text-align: center;
+        }
+        .banner h1 {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 36px;
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #ff5722;
+        }
+        .promotion {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .promotion-item {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+        }
+        .promotion-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .cta {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .cta button {
+            background-color: #ff5722;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .cta button:hover {
+            background-color: #e64a19;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            width: 80%;
+            max-width: 400px;
+        }
+        button {
+            background-color: #ff5722;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jangan lupa mampir ke tempat kami</h1>
+    </header>
+
+    <section class="banner">
+        <h1>Masakan terbaik dari koki terbaik </h1>
+    </section>
+
+    <div class="container">
+        <h2>Masakan Unggulan</h2>
+        <div class="promotion">
+            <div class="promotion-item">
+                <img src="https://www.mokapos.com/blog/_next/image?url=https%3A%2F%2Fwp.mokapos.com%2Fwp-content%2Fuploads%2F2023%2F02%2Finspirasi-foto-makanan-yang-enak-ayam-panggang.jpg&w=3840&q=75" alt="Ayam Bakar Adib Putra">
+                <h3>Ayam Bakar Adib</h3>
+                <p>Diskon 50%! Hanya hari ini!</p>
+            </div>
+            <div class="promotion-item">
+                <img src="https://akcdn.detik.net.id/visual/2024/05/20/soto-ayam_43.jpeg?w=720&q=90" alt="Produk 2">
+                <h3>Soto spesial dibuat oleh Adib sendiri</h3>
+                <p>Harga Spesial untuk Anda</p>
+            </div>
+            <div class="promotion-item">
+                <img src="https://tribratanews.polri.go.id/web/image/blog.post/56433/image" alt="Produk 3">
+                <h3>Martabak manis seperti Adib</h3>
+                <p>Gratis Fotbar bareng adib di pembelian dua porsi martabak</p>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>Daftar Sekarang dan Dapatkan Penawaran Eksklusif!</h2>
+            <form id="signup-form">
+                <input type="email" id="email" placeholder="Masukkan Email Anda" required>
+                <button type="submit">Daftar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Web Promosi. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            if (email) {
+                alert(`Terima kasih telah mendaftar dengan email: ${email}`);
+                document.getElementById('signup-form').reset();
+            } else {
+                alert('Harap masukkan email yang valid.');
+            }
+        });
+    </script>
+</body>
+</html>
